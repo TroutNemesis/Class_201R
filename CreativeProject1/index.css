@@ -1,0 +1,92 @@
+body{
+    background-image: url("http://2twszc1fqsig2601yhlbhoyh3g.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Y-mountain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html{
+    min-height:100%;
+}
+
+.left
+{
+    background-color: MidnightBlue;
+    height:180px;
+    width:125px;
+    float: left;
+    margin-left: 0.128%;
+    margin-top: 25%;
+    border-radius: 10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    position:fixed;
+    z-index:2;
+}
+
+.headBar {
+   background-color: MidnightBlue;
+   margin-left:136px;
+   margin-top: 100px;
+   text-align:center;
+   position:fixed;
+   width:90%;
+}
+.headBar #headTab{
+    margin-left:50px;
+    margin-right:50px;
+    display:inline-block;
+    white-space: nowrap;
+}
+
+#imgdiv {
+    height:150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    float:left;
+    
+}
+
+#imgdiv img {
+    max-height:100%;
+}
+
+#welcome{
+    position:fixed;
+    color:White;
+    background-color: MidnightBlue;
+    text-align: center;
+    height: 100px;
+    padding-top:25px;
+    margin-left:136px;
+    width:90%;
+}
+
+.btn-primary {
+    background-color:MidnightBlue;
+    border-color:MidnightBlue;
+}
+
+#right{
+    color:white ;
+    float: left;
+    margin-top: 0px;
+    margin-left: 136px;
+    padding-left: 50px;
+    background-color: rgba(54, 25, 25, .5);
+    height: 4500px;
+    width:90%;
+   
+}
+
+.cell{
+    border: 1px solid black;
+    width: 227px;
+    height: 150px;
+}
+
+.number{
+    border: 1px solid black;
+    width: 10%;
+    height: 10px;
+    padding-right: -10px;
+}

@@ -1,0 +1,47 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="index.css">
+        </head>
+    <body>
+    <div id="imgdiv">
+        <img src="http://img.deseretnews.com/images/article/midres/155434/155434.jpg">
+    </div>
+   <div id="welcome">
+        <h1>CS 201R Learningsuite Alternative</h1>
+    </div>
+    
+    <div class="headBar">
+    <ul class="nav nav-pills" id="headTab">
+        <li id="home"><a class="btn btn-primary btn-lg btn-block" href="#">Home</a></li>
+        <li id="projects"><a class="btn btn-primary btn-lg btn-block" href="#">Projects</a></li>
+        <li id="taProfessor"><a class="btn btn-primary btn-lg btn-block" href="#">Teachers</a></li>
+        <li id="groups"><a class="btn btn-primary btn-lg btn-block" href="#">Groups</a></li>
+        <li id="syllabus"><a class="btn btn-primary btn-lg btn-block" href="#">Syllabus</a></li>
+    </ul></div>
+    	<div class="left"> 
+    	    <div class="col-md-12 text-center">
+        	    <ul class="nav nav-pills center-pills">
+                    <li><a class="btn btn-primary btn-md btn-block" href="#">September</a></li>
+                    <li><a class="btn btn-primary btn-md btn-block" href="#">October</a></li>
+                    <li><a class="btn btn-primary btn-md btn-block" href="#">November</a></li>
+                    <li><a class="btn btn-primary btn-md btn-block" href="#">December</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="right">
+            
+            <p>THIS IS PRETTY AWESOME</p>
+            
+        </div>
+    </body>
+    
+    
+    
+    
+    
+    
+</html>

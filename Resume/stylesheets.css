@@ -1,0 +1,47 @@
+body{
+    
+    background-image: url("http://i.stack.imgur.com/p9mUO.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html{
+    min-height:100%;
+}
+#left{
+    background-color: rgba(155,155,155,.35);
+    border-radius: 5px; 
+    margin-left: 1.25%;
+}
+#middle{
+    background-color: rgba(155,155,155,.35);
+    border-radius: 5px; 
+    width: 25%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+#right{
+    background-color: rgba(155,155,155,.35);
+    border-radius: 5px; 
+}
+#header{
+    background-color: #201B3E;
+    border-radius: 5px; 
+    color: #666452;
+}
+#footer{
+    background-color: rgba(155,155,155,.35);
+    color: black;
+    width: 250px;
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 20px;
+    border-radius: 10%; 
+    font-weight:900;
+    padding-left: 10px;
+}
+p{
+    color: #E6E1B8;
+}
+.h4{
+    font-size-adjust: 1.58;
+}
