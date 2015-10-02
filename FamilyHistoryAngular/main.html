@@ -29,7 +29,7 @@
     
         $scope.todoAdd = function() {
             //<!--var family = todoText:$scope.personInput + todoText:$scope.fatherInput + todoText:$scope.motherInput;-->
-            var fam = $scope.fatherInput + ", " + $scope.fatherInput + ", " + $scope.motherInput;
+            var fam = $scope.personInput + ", " + $scope.fatherInput + ", " + $scope.motherInput;
             $scope.todoList.push({todoText:fam, done:false});
             $scope.personInput = "";
             $scope.fatherInput = "";

@@ -1,0 +1,18 @@
+server:	
+	g++ -g -std=c++11 server.cpp Message.cpp echo-server.cpp -o msgd
+
+client:
+	g++ -g -std=c++11 client.cpp echo-client.cpp -o msg
+
+test:	client server run
+	python parseTest.py
+
+run:
+	./Server
+	
+	
+	server client
+	
+	
+	
+	 msgd msg
