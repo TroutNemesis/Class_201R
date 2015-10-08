@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <title>Find the Gram</title>
+    <link rel="stylesheet" type="text/css" href="events-ajax-practice/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="events-ajax-practice/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="events-ajax-practice/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="events-ajax-practice/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="events-ajax-practice/styles.css">
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 500px; }
+    </style>
+  </head>
+  
+  
+  <body>
+    <div style="text-align: center;" id="top">
+        <h1>Find the Gram</h1>
+        
+    </div>
+        
+    
+    <div  id="map"></div>
+    
+    <script type="text/javascript">
+        
+        var map;
+        var lat;
+        var lng;
+        
+         
+        
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40.233844, lng: -111.658534},
+            //scrollwheel: false,
+            zoom: 12
+          });
+          
+          
+          google.maps.event.addListener(map, "rightclick", function(event) {
+            lat = event.latLng.lat();
+            lng = event.latLng.lng();
+            // populate yor box/field with lat, lng
+            //alert("Lat=" + lat + "; Lng=" + lng);
+            
+            var longitude = document.getElementById("lng");
+            longitude.innerHTML = "Longitude: " + lng;
+            var latitude = document.getElementById("lat");
+            latitude.innerHTML = "Latitude: " + lat;
+        });
+        }
+        
+        var jsonData;
+        var myurl = "http://www.google.com";
+        $.ajax({
+        url : myurl,
+        
+         success : function(data) {
+        jsonData = data;
+             console.log(data);
+       
+             var everything = "<div>";
+            
+            for(var i in data['events'])
+            {
+	            var title = data['events'][i]['name']['text'];
+	            var location = title.substring(0, 30) + "...";
+	            // var startTime = data['current_observation']['temperature_string'];
+	            var logoUrl = data['events'][i]['logo']['url'];
+	            var eventUrl = data['events'][i]['url'];
+	            // var current_weather = data['current_observation']['weather'];
+	            everything += "<div class=\"col-sm-6 col-md-3 \">";
+	            everything += "<div class=\"thumbnail featured-product\">";
+	            everything += "<img src=\"" + logoUrl + "\">";
+	            everything += "<h3>"+ location + "</h3>" ;
+	            everything += "</div>";
+	            everything += "</div>";
+        	}
+        //     // After Loop
+        	everything += "</div>"
+            console.log(everything);
+        //     $("#currentWeather").html(everything);
+        }
+      })
+        
+       
+
+    </script>
+    
+    <div class="Coordinates">
+        <h4 style="display:inline;" id ="lat">Latitude:</h4>
+        <br>
+        <h4  style="display:inline;" id ="lng">Longitude:</h4>
+        
+    </div>
+    
+    	<!-- Featured Products -->
+	<div class="container">
+		<h1 class="text-center onWhite">Recent Grams Based On Your Search:</h1>
+		<div class="row">
+		<div id="currentWeather">
+			<!-- Div where items are populated -->
+		</div>
+			
+		</div>
+    </div><!-- /.container -->
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBu_F48T_3am6pJ7hlh2ifPfuEJ9P7eXY&callback=initMap">
+    </script>
+
+    <script type="text/javascript" src="events.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
