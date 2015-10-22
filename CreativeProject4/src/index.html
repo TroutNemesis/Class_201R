@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="./app.js"></script>
+<link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="utf-8">
+  <title>Node api tutorial</title>
+</head>
+<body>
+
+
+  <div id='app' ng-app='app' ng-controller='mainCtrl'>
+
+    <form id="input" ng-submit="todoAdd()" style='text-align: center;'>
+        <input type="text" ng-model="dataType" size="30" placeholder="places or people">
+        <input type="submit" value="Submit Request">
+    </form>
+
+    
+        <div id="map" style='display: none;'>
+        <p>hey there you crazy beast</p>
+        </div>
+        <script>
+            function initMap() {
+              var myLatLng = {lat: 38.8833, lng: -77.0167};
+              var provo = {lat: 40.233844, lng: -111.658534};
+              var denver = {lat: 39.739236, lng: -104.990251};
+              var pineGrove = {lat: 38.413352, lng: -120.659131};
+              var woodlandPark = {lat: 38.993881, lng: -105.056930};
+              var milford = {lat: 42.8353, lng: -71.6489};
+              var belmont = {lat: 42.395640, lng: -71.177611};
+            
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 3,
+                center: myLatLng
+              });
+            
+              var markerProvo = new google.maps.Marker({
+                position: provo,
+                map: map,
+                title: 'Provo, UT'
+              });
+              var markerDenver = new google.maps.Marker({
+                position: denver,
+                map: map,
+                title: 'Denver, CO'
+              });
+              var markerPineGrove = new google.maps.Marker({
+                position: pineGrove,
+                map: map,
+                title: 'Pine Grove, CA'
+              });
+              var markerWoodlandPark = new google.maps.Marker({
+                position: woodlandPark,
+                map: map,
+                title: 'Woodland Park, CO'
+              });
+              var markerMilford = new google.maps.Marker({
+                position: milford,
+                map: map,
+                title: 'Milford, NH'
+              });
+              var markerBelmont = new google.maps.Marker({
+                position: belmont,
+                map: map,
+                title: 'Belmont, MA'
+              });
+            }
+        </script>
+    
+    <div id='places' style='display: none;'>
+        <div ng-if='!info.length' class='no-pokemon center stretch' style='display: none;'>
+          <h1 class='h1'>
+            Set up your endpoint at `/pokemon` to get this view working
+          </h1>
+        </div>
+    
+        <ul ng-if='info.length' class='list center stretch'>
+          <li ng-repeat='p in info' class='pokemon'>
+            <h1>{{ p.name }}</h1>
+            <h2>Latitude: {{p.lat}}</h2>
+            <h2>Longitude: {{p.lng}}</h2>
+            <img class='picture' ng-src="{{p.avatarUrl}}" />
+          </li>
+        </ul>
+    </div>
+
+    <div id='people' style='display: none;'>
+        <div ng-if='!info.length' class='no-pokemon center stretch' style='display: none;'>
+          <h1 class='h1'>
+            Set up your endpoint at `/pokemon` to get this view working
+          </h1>
+        </div>
+    
+        <ul ng-if='info.length' class='list center stretch'>
+          <li ng-repeat='p in info' class='pokemon'>
+            <h1>{{ p.name }}</h1>
+            <h2>Age: {{p.age}}</h2>
+            <img class='picture' ng-src="{{p.avatarUrl}}" />
+          </li>
+        </ul>   
+    </div>
+    
+    <div id='pokemonIf' style='display: none;'>
+        <div ng-if='!info.length' class='no-pokemon center stretch' style='display: none;'>
+          <h1 class='h1'>
+            Set up your endpoint at `/pokemon` to get this view working
+          </h1>
+        </div>
+    
+        <ul ng-if='info.length' class='list center stretch'>
+          <li ng-repeat='p in info' class='pokemon'>
+            <h1>{{ p.name }}</h1>
+            <img class='avatar' ng-src="{{p.avatarUrl}}" />
+          </li>
+        </ul>
+    </div>
+  </div>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDekb0GKGZDoVsjj-0A46xUutivZkswn_0&callback=initMap">
+  </script>
+</body>
+</html>

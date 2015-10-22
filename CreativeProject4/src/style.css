@@ -1,0 +1,87 @@
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: helvetica;
+  background-color: #C2D6D6;
+}
+
+div, ul {
+  margin: 0;
+  padding: 0;
+}
+
+#map{
+  height: 50vh;  
+    width: 50%;
+    margin-left: 25%;
+}
+
+.stretch {
+  width: 100%;
+  height: 100%;
+}
+
+.no-pokemon {
+  background-color: #ED5565;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.h1 {
+  margin: 0;
+  color: white;
+}
+
+.pokemon {
+  padding: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.picture{
+    width: 300px;
+}
+
+.list {
+  text-align: center;
+  list-style: none;
+ 
+  color: white;
+}
+
+.left
+{
+    background-color: #1F2E2E;
+    height:162px;
+    width:100px;
+    float: left;
+    margin-left: 0.128%;
+    margin-top: 25%;
+    border-radius: 10px;
+    padding-top:0px;
+    padding-bottom:10px;
+    position:fixed;
+    z-index:2;
+}
+
+.nav {
+    background: #3D5C5C;
+}
+.nav a {
+  background: #3D5C5C;
+  padding-right: 0px;
+  padding-left: 0px;
+  width: 69px;
+
+}
